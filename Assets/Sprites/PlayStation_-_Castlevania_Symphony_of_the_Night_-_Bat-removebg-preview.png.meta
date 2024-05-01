@@ -1,0 +1,555 @@
+fileFormatVersion: 2
+guid: e8c9b1feaf629324d9ec8963d8e2cf88
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 83
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c858487d41bc840983c7871be57a1a
+      internalID: -1185107382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 90
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4020db14c600ac4780c33af61ff119b
+      internalID: -294507739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 97
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034e488f7ad0c964c85402bacf1e438d
+      internalID: -493792569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 97
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a34f52fd51caeb4aab1f9f0484fd122
+      internalID: -362084450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 97
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6a2259e90165b40832d78993f2c8a6
+      internalID: -252229609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 96
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebf585da6e34d844b75e7f7549cdb17
+      internalID: -2004067426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 66
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df179bd09d18214a962a77b4c49309d
+      internalID: -135102039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 61
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d813bbc3e08fae419bfb834ad83a16a
+      internalID: -608617160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 22
+        width: 70
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c04e29f0cfe2445b783c878d45a3da
+      internalID: -422086630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 29
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe71bf45d3fda864f8b0fa900e30e3c5
+      internalID: 655543189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 35
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704db97f3dd84ec4ab0d96acc9bd60f3
+      internalID: -1716234442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 28
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369490ca8e860cb479b8574e2f06d5d6
+      internalID: 452957398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 6
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ceeb6c882245441a85d033c718769f
+      internalID: 534542081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 4
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0943503246dfd14d8279f0093208b33
+      internalID: 2075158096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 24
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9eda95de0c1ec4d8e4b2af13cf1f47
+      internalID: 96338515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 23
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec5b812ea63430478b2bab9c189c7ca
+      internalID: 2116721404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 6
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d407a0052eff141b8c13f9c4bfde7f
+      internalID: 185791890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 2
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08721fd7d33dfc42b9697eeaeb5a8d0
+      internalID: -920587155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 6
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e22b104344a35d449231dbc7acb08ff
+      internalID: -129688527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 10
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a2fc0cc76433a43a0a8bdb01574838
+      internalID: -704240631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_0: -1185107382
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_1: -294507739
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_10: -1716234442
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_11: 452957398
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_12: 534542081
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_13: 2075158096
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_14: 96338515
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_15: 2116721404
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_16: 185791890
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_17: -920587155
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_18: -129688527
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_19: -704240631
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_2: -493792569
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_20: -1155676554
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_3: -362084450
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_4: -252229609
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_5: -2004067426
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_6: -135102039
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_7: -608617160
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_8: -422086630
+      PlayStation_-_Castlevania_Symphony_of_the_Night_-_Bat-removebg-preview_9: 655543189
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
