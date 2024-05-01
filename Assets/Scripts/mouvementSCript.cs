@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class mouvementSCript : MonoBehaviour
 {
+    public static mouvementSCript instance;
+
+
     [Header("Mouvement Var")]
     [SerializeField] private float moveSpeed;
     Rigidbody2D rb;
@@ -15,6 +18,7 @@ public class mouvementSCript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
