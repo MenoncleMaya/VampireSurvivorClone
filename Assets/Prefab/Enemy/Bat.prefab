@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1651348445370927021}
+  - component: {fileID: 9183862700481593319}
   - component: {fileID: 8560906468373222051}
   - component: {fileID: 4261873321420035982}
   - component: {fileID: 6411938078532854824}
@@ -119,6 +120,19 @@ Transform:
   - {fileID: 3363931888021206662}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9183862700481593319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6535285433056533915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9648ef0b6a9669942b1ec44b7de85fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
 --- !u!114 &8560906468373222051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,10 +142,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6535285433056533915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d02ca939a9a994c4d9731de678136d43, type: 3}
+  m_Script: {fileID: 11500000, guid: bd9047782ac54484a8a9e015ac27a209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  mouvementSpeed: 7
 --- !u!61 &4261873321420035982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -161,7 +175,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371710206857167066}
   - component: {fileID: 880028208015082661}
+  - component: {fileID: 2125428250784201219}
   - component: {fileID: 4773314602745562982}
   - component: {fileID: 3232131653821809457}
   m_Layer: 0
@@ -44,10 +45,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2145710160169099856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d02ca939a9a994c4d9731de678136d43, type: 3}
+  m_Script: {fileID: 11500000, guid: 9648ef0b6a9669942b1ec44b7de85fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
+--- !u!114 &2125428250784201219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145710160169099856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9047782ac54484a8a9e015ac27a209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouvementSpeed: 3
 --- !u!61 &4773314602745562982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -77,7 +91,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0014140904, y: 0.48640922}

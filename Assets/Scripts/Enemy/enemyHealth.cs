@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ennemyHealth : MonoBehaviour, IPooledObject
+public class enemyHealth : MonoBehaviour, IPooledObject
 {
     [SerializeField] private const int MAX_HEALTH = 20;
     [SerializeField] private int currentHealth = 0;

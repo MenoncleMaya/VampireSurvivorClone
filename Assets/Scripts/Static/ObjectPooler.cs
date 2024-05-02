@@ -69,6 +69,7 @@ public class ObjectPooler : MonoBehaviour
         {
             pooledObj.OnObjectSpawn();
         }
+        else { Debug.LogWarning("object NULL!"); }
 
         poolDictionary[tag].Enqueue(objToSpawn);
 

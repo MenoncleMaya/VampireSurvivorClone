@@ -21,7 +21,7 @@ public class Scythe : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ennemy")
         {
-            collision.GetComponent<ennemyHealth>().TakeDamage(dammage);
+            collision.GetComponent<enemyHealth>().TakeDamage(dammage);
             Destroy(gameObject);
         }
     }
