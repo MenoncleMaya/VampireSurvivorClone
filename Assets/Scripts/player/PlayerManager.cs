@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour
     public void AddXp(int ammount)
     {
         currentXp += ammount;
-        if(currentXp >= nextLv) { currentLv++; nextLv *= 10; }
+        if(currentXp >= nextLv) { currentLv++; currentXp = 0; nextLv *= 2;  }
 
         UiManager.GetInstance().UpdateXpSlider(currentXp / nextLv);
 

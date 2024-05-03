@@ -25,8 +25,8 @@ public class enemyHealth : MonoBehaviour, IPooledObject
     {
         SoundPlayer.GetInstance().PlayDeathSound();
 
-        ObjectPooler.GetInstance().SpawnFromPool("SmallXpOrb", this.gameObject.transform.position);
-
+        GameObject temp = ObjectPooler.GetInstance().SpawnFromPool("SmallXpOrb", this.gameObject.transform.position);
+        
         gameObject.SetActive(false);
     }
 

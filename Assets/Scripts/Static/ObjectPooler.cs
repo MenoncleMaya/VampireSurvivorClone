@@ -49,7 +49,7 @@ public class ObjectPooler : MonoBehaviour
 
     }
 
-    public GameObject SpawnFromPool (string tag, Vector3 position/*, Quaternion rotation*/)
+    public GameObject SpawnFromPool (string tag, Vector3 position)
     {
         if (!poolDictionary.ContainsKey(tag))
         {
@@ -102,11 +102,5 @@ public class ObjectPooler : MonoBehaviour
         poolDictionary[tag].Enqueue(objToSpawn);
 
         return objToSpawn;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
