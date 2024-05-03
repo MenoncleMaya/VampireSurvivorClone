@@ -15,6 +15,11 @@ public class enemyHealth : MonoBehaviour, IPooledObject
         currentHealth = MAX_HEALTH;
     }
 
+    private void OnEnable()
+    {
+        ResetColor();
+    }
+
     public void TakeDamage(int dammage)
     {
         currentHealth -= dammage;
@@ -25,7 +30,7 @@ public class enemyHealth : MonoBehaviour, IPooledObject
     {
         SoundPlayer.GetInstance().PlayDeathSound();
 
-        GameObject temp = ObjectPooler.GetInstance().SpawnFromPool("SmallXpOrb", this.gameObject.transform.position);
+        ObjectPooler.GetInstance().SpawnFromPool("SmallXpOrb", gameObject.transform.position);
         
         gameObject.SetActive(false);
     }
@@ -34,6 +39,10 @@ public class enemyHealth : MonoBehaviour, IPooledObject
     {
         sr.color = Color.red;
         yield return new WaitForSeconds(0.2f);
+        sr.color = Color.white;
+    }
+    public void ResetColor()
+    {
         sr.color = Color.white;
     }
 }

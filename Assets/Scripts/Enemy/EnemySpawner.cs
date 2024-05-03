@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -11,44 +12,42 @@ public class EnemySpawner : MonoBehaviour
     //[SerializeField] GameObject ;
     #endregion
 
+    [System.Serializable]
+
+    public class Wave
+    {
+        public string[] tags;
+    }
+
     [Header("Settings")]
     [SerializeField] private float spawnInterval;
     [SerializeField] private float currentTime;
     [SerializeField] private float spawnRange;
-    int randomEnemy;
-    List<string[]> waves;
-    int currentWaves = 1;
+    //int randomEnemy;
+    public List<Wave> waves = new List<Wave>();
+    int currentWave = 0;
 
 
     private void Start()
     {
-        currentTime = spawnInterval;
+        //currentTime = spawnInterval;
+        StartCoroutine(SpawnEnemy());
+        //NextWave to do
     }
 
-    private void FixedUpdate()
+    public IEnumerator SpawnEnemy()
     {
-        if (currentTime > 0)
+        int j = 0;
+        int amountToSpawn = waves[currentWave].tags.Length / 60;
+        while (j < 60)
         {
-            currentTime -= Time.deltaTime;
-        }
-        else
-        {
-            currentTime = spawnInterval;
-            //ObjectPooler.GetInstance().SpawnFromPool(merman, GenerateRandomPoint(spawnRange));
-        }
-    }
-
-    public IEnumerator SpawnEnemy(int wave)
-    {
-        while (true)
-        {
-            for (int i = 0; i < waves[wave].Length; i++) //change this to take out rng amount later?
+            for (int i = 0 + amountToSpawn * j; i < amountToSpawn * 1 + j; i++) //change this to take out rng amount later?
             {
-                ObjectPooler.GetInstance().SpawnFromPool(merman, GenerateRandomPoint(spawnRange));
+                GameObject temp = ObjectPooler.GetInstance().SpawnFromPool(waves[currentWave].tags.ElementAt(i), GenerateRandomPoint(spawnRange));
             }
-            randomEnemy = Random.Range(0, waves[wave].Length);
+            //randomEnemy = Random.Range(0, waves[wave].Length);
 
-
+            j++;
             yield return new WaitForSeconds(spawnInterval);
         }
 
