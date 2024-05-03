@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8330235735269437889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2366623862708987865}
+  - component: {fileID: 1841868875801963250}
+  m_Layer: 0
+  m_Name: ObjectPooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2366623862708987865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330235735269437889}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.97279316, y: -1.4144741, z: -0.04970019}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1841868875801963250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330235735269437889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34a7447ba2bf73408f9375bb9af9a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: Merman
+    prefab: {fileID: 2145710160169099856, guid: c6a46212c5c53b8408988ec22cc80908, type: 3}
+    size: 150
+  - tag: Scythe
+    prefab: {fileID: 3152026506027575536, guid: 6bc4acb71396274428671caca1e2a328, type: 3}
+    size: 100
+  - tag: SmallXpOrb
+    prefab: {fileID: 3485711953274229556, guid: 0f9354052f8adc6498d0fb53ab1f2d0d, type: 3}
+    size: 300
+  - tag: MediumXpOrb
+    prefab: {fileID: 3485711953274229556, guid: c7607c4049dc9354d922f71e5c1ba089, type: 3}
+    size: 200

@@ -75,6 +75,34 @@ public class ObjectPooler : MonoBehaviour
 
         return objToSpawn;
     }
+    public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
+    {
+        if (!poolDictionary.ContainsKey(tag))
+        {
+            Debug.LogWarning("Pool with tag " + tag + " doesn't excist.");
+            return null;
+        }
+
+        GameObject objToSpawn = poolDictionary[tag].Dequeue();
+
+        objToSpawn.SetActive(true);
+        objToSpawn.transform.position = position;
+        objToSpawn.transform.rotation = rotation;
+
+
+        IPooledObject pooledObj = objToSpawn.GetComponent<IPooledObject>();
+
+
+        if (pooledObj != null)
+        {
+            pooledObj.OnObjectSpawn();
+        }
+        else { Debug.LogWarning("object NULL!"); }
+
+        poolDictionary[tag].Enqueue(objToSpawn);
+
+        return objToSpawn;
+    }
 
     // Update is called once per frame
     void Update()

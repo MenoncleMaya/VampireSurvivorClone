@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
+  sr: {fileID: 8415716111022643756}
 --- !u!114 &6618051419267891058
 MonoBehaviour:
   m_ObjectHideFlags: 0

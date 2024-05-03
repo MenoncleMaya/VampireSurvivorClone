@@ -166,5 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
+  dammage: 0
   speed: 0.3
   rotationSpeed: 400
+  children: {fileID: 2876041407358224457}

@@ -48,7 +48,7 @@ MonoBehaviour:
   squeleton: Squeleton
   spawnInterval: 3
   currentTime: 0
-  spawnRange: 8
+  spawnRange: 10
 --- !u!1 &2702779307551815366
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,12 +285,13 @@ GameObject:
   m_Component:
   - component: {fileID: 289251605912797158}
   - component: {fileID: 1179144158213256771}
+  - component: {fileID: 7342165538778065215}
   - component: {fileID: 5250055247403990044}
   - component: {fileID: 98627940690144976}
   - component: {fileID: 9116519327962067351}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,6 +328,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   flipX: 0
+--- !u!114 &7342165538778065215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9223161373266665043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f510fb452af8c843ada913641e9dacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dammageModifier: 0
+  healtModifier: 0
+  speedModifier: 0
+  flatDammageModifier: 0
+  flatHealtModifier: 0
+  flatSpeedModifier: 0
+  currentXp: 0
+  currentLv: 0
 --- !u!50 &5250055247403990044
 Rigidbody2D:
   serializedVersion: 4
@@ -411,9 +432,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3838d84cf9d4894f9eb1a3a12fbdb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkDamage: 10
+  Lv1AtkDammage: 3
+  Lv2AtkDammage: 6
+  Lv3AtkDammage: 10
   atkSpeed: 1
   atkTimer: 0
   canAtk: 0
-  weapon: {fileID: 3152026506027575536, guid: 6bc4acb71396274428671caca1e2a328, type: 3}
   direction: 0
+  atkLv: 3

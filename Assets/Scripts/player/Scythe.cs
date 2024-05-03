@@ -9,12 +9,19 @@ public class Scythe : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float rotationSpeed;
     [SerializeField] private const string ENNEMY = "Ennemy";
+    [SerializeField] private GameObject children;
 
-    // Update is called once per frame
+    private void Awake()
+    {
+        //children = gameObject.GetComponentInChildren<GameObject>();
+        //Debug.Log(children);
+        //Debug.Log(GetComponentInChildren<GameObject>());
+    }
+
     void FixedUpdate()
     {
-        transform.position += Vector3.right * speed * direction;
-        transform.Rotate(0, 0, rotationSpeed * Time.deltaTime * -direction);
+        transform.position += transform.right * speed * direction;
+        children.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime * -direction);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,7 +29,7 @@ public class Scythe : MonoBehaviour
         if(collision.gameObject.tag == "Ennemy")
         {
             collision.GetComponent<enemyHealth>().TakeDamage(dammage);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

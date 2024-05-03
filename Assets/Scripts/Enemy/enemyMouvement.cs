@@ -17,18 +17,17 @@ public class enemyMouvement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         playerRef = mouvementSCript.instance.gameObject;
-        Debug.Log(playerRef);
     }
 
     private void Update()
     {
         if (direction.x < 0)
         {
-            sprite.flipX = true;
+            sprite.flipX = false;
         }
         else if (direction.x > 0)
         {
-            sprite.flipX = false;
+            sprite.flipX = true;
         }
     }
 
