@@ -15,6 +15,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float spawnInterval;
     [SerializeField] private float currentTime;
     [SerializeField] private float spawnRange;
+    int randomEnemy;
+    List<string[]> waves;
+    int currentWaves = 1;
+
 
     private void Start()
     {
@@ -30,13 +34,24 @@ public class EnemySpawner : MonoBehaviour
         else
         {
             currentTime = spawnInterval;
-            ObjectPooler.GetInstance().SpawnFromPool(merman, GenerateRandomPoint(spawnRange));
+            //ObjectPooler.GetInstance().SpawnFromPool(merman, GenerateRandomPoint(spawnRange));
         }
     }
 
-    public void SpawnEnemy()
+    public IEnumerator SpawnEnemy(int wave)
     {
-        
+        while (true)
+        {
+            for (int i = 0; i < waves[wave].Length; i++) //change this to take out rng amount later?
+            {
+                ObjectPooler.GetInstance().SpawnFromPool(merman, GenerateRandomPoint(spawnRange));
+            }
+            randomEnemy = Random.Range(0, waves[wave].Length);
+
+
+            yield return new WaitForSeconds(spawnInterval);
+        }
+
     }
 
     public Vector3 GenerateRandomPoint(float distance)
