@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
     [Header("Enemys")]
     [SerializeField] string merman;
     [SerializeField] string squeleton;
+    [SerializeField] string bat;
     //[SerializeField] GameObject ;
     #endregion
 
@@ -18,11 +19,10 @@ public class EnemySpawner : MonoBehaviour
     public class Wave
     {
         public string[] tags;
+        public int enemyAmount;
     }
 
     [Header("Settings")]
-    [SerializeField] private float spawnInterval;
-    [SerializeField] private float currentTime;
     [SerializeField] private float spawnRange;
     //int randomEnemy;
     public List<Wave> waves = new List<Wave>();
@@ -34,18 +34,18 @@ public class EnemySpawner : MonoBehaviour
     {
         //currentTime = spawnInterval;
         StartCoroutine(WaveStarter());
-        
+
     }
 
     public IEnumerator SpawnEnemy()
     {
         int j = 0;
-        int amountToSpawn = waves[currentWave].tags.Length / 60;
+        int amountToSpawn = waves[currentWave].enemyAmount / 60;
         while (j < 60)
         {
             for (int i = 0 + amountToSpawn * j; i < amountToSpawn * 1 + j; i++) //change this to take out rng amount later?
             {
-                ObjectPooler.GetInstance().SpawnFromPool(waves[currentWave].tags.ElementAt(i), GenerateRandomPoint(spawnRange));
+                ObjectPooler.GetInstance().SpawnFromPool(waves[currentWave].tags.ElementAt(UnityEngine.Random.Range(1, waves[currentWave].tags.Length + 1)), GenerateRandomPoint(spawnRange));
             }
             //randomEnemy = Random.Range(0, waves[wave].Length);
 
@@ -58,16 +58,16 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            if(currentWave !> waves.Count)
+            if (currentWave < waves.Count)
             {
                 StartCoroutine(SpawnEnemy());
                 currentWave++;
             }
             else
             {
-                StartCoroutine(SpawnEnemy());
+                StartCoroutine(SpawnEnemyInfinity());
             }
-            StartCoroutine(SpawnEnemy());
+            Debug.Log(currentWave);
             yield return new WaitForSeconds(60f);
         }
 
@@ -79,9 +79,9 @@ public class EnemySpawner : MonoBehaviour
         int j = 0;
         while (true)
         {
-            for (int i = 0; i < amountToSpawn + j/2; i++) //change this to take out rng amount later?
+            for (int i = 0; i < amountToSpawn + j / 2; i++) //change this to take out rng amount later?
             {
-                ObjectPooler.GetInstance().SpawnFromPool(lastWave.tags.ElementAt(UnityEngine.Random.Range(0, lastWave.tags.Length)), GenerateRandomPoint(spawnRange));
+                ObjectPooler.GetInstance().SpawnFromPool(lastWave.tags.ElementAt(UnityEngine.Random.Range(1, waves[currentWave].tags.Length + 1)), GenerateRandomPoint(spawnRange));
             }
             j++;
             //randomEnemy = Random.Range(0, waves[wave].Length);
