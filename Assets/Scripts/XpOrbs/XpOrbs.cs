@@ -127,7 +127,7 @@ public class XpOrbs : MonoBehaviour
         int tempCount = 0;
         foreach (GameObject o in orbs)
         {
-            if (o.active)
+            if (o.activeInHierarchy)
             {
                 tempCount++;
             }
