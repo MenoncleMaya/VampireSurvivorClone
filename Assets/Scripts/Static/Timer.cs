@@ -23,15 +23,16 @@ public class Timer : MonoBehaviour
         {
             seconds -= 60;
             ++minutes;
+            UiManager.GetInstance().UpdateMinute(minutes);
             EnemySpawner.GetInstance().WaveStarter();
         }
         if(seconds.ConvertTo<int>() == 60)
         {
-        UiManager.GetInstance().UpdateTime(59, minutes);
+        UiManager.GetInstance().UpdateSecond(59);
         }
         else
         {
-        UiManager.GetInstance().UpdateTime(seconds.ConvertTo<int>(), minutes);
+        UiManager.GetInstance().UpdateSecond(seconds.ConvertTo<int>());
         }
     }
 }

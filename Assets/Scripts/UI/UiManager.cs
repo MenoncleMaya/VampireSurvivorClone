@@ -29,9 +29,9 @@ public class UiManager : MonoBehaviour
         xpSlider.value = amount;
     }
 
-    private void UpdateSeconds(int time)
+    public void UpdateSecond(int time)
     {
-        if(time < 10) 
+        if (time < 10)
         {
             seconde = "0" + time.ToString();
         }
@@ -41,15 +41,9 @@ public class UiManager : MonoBehaviour
         }
         tSeconds.text = seconde;
     }
-    private void UpdateMinutes(int time)
+    public void UpdateMinute(int time)
     {
         minute = time;
         tMinutes.text = minute.ToString();
-    }
-
-    public void UpdateTime(int seconde, int minute)
-    {
-        UpdateSeconds(seconde);
-        UpdateMinutes(minute);    
     }
 }
