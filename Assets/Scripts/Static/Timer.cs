@@ -12,7 +12,6 @@ public class Timer : MonoBehaviour
     {
         seconds = 0f;
         minutes = 0;
-        EnemySpawner.GetInstance().WaveStarter();
     }
 
     // Update is called once per frame

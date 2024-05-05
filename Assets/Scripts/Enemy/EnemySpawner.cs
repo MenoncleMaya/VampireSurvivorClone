@@ -34,6 +34,7 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         instance = this;
+        WaveStarter();
     }
 
     private IEnumerator SpawnEnemy()
