@@ -12,6 +12,8 @@ public class UiManager : MonoBehaviour
     public static UiManager GetInstance() => instance;
 
     [SerializeField] Slider xpSlider;
+    [SerializeField] GameObject timerHolder;
+    [SerializeField] GameObject deathScreen;
     [SerializeField] TextMeshProUGUI tSeconds;
     [SerializeField] TextMeshProUGUI tMinutes;
     
@@ -45,5 +47,10 @@ public class UiManager : MonoBehaviour
     {
         minute = time;
         tMinutes.text = minute.ToString();
+    }
+
+    public void playerDeath()
+    {
+        deathScreen.SetActive(true);
     }
 }
