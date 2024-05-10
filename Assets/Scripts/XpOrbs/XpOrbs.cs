@@ -74,6 +74,10 @@ public class XpOrbs : MonoBehaviour
                 direction = playerRef.transform.position - rb.transform.position;
                 rb.velocity = direction.normalized * strength;
             }
+            else
+            {
+                rb.velocity = Vector3.zero;
+            }
         }
     }
 

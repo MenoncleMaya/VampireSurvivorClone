@@ -7,7 +7,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     #region EnemyPrefab
-    [Header("Enemys")]
+    [Header("EnemysTag")]
     [SerializeField] string merman;
     [SerializeField] string squeleton;
     [SerializeField] string bat;

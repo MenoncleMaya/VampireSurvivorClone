@@ -1,14 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
     private float seconds;
     private int minutes;
 
-    private void Start()
+    private void Awake()
     {
         seconds = 0f;
         minutes = 0;
