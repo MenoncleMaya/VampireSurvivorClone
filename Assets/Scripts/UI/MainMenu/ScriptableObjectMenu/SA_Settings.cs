@@ -6,5 +6,5 @@ using UnityEngine;
 public class SA_Settings : ScriptableObject
 {
     [Range(0, 100)]
-    public int Volume;
+    public float Volume;
 }

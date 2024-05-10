@@ -17,13 +17,16 @@ public class playerAttack : MonoBehaviour
     private SpriteRenderer sr;
     private float rotTop = 30f;
     private float rotBot = 330f;
+    private bool playerIsAlive;
 
 
 
-    private void Start()
+    private void Awake()
     {
         atkTimer = ATK_TIMER;
         sr = GetComponentInChildren<SpriteRenderer>();
+        PlayerManager.GetInstance().PlayerIsDead += playersDeath;
+        playerIsAlive = true;
     }
 
     private void Update()
@@ -37,6 +40,7 @@ public class playerAttack : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(playerIsAlive)
         if (canAtk)
         {
             atkTimer = ATK_TIMER;
@@ -99,6 +103,11 @@ public class playerAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         atk.SetActive(false);
+    }
+
+    private void playersDeath()
+    {
+        playerIsAlive = false;
     }
 }
 

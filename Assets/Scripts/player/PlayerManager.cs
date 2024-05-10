@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,19 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     private static PlayerManager instance;
-    public static PlayerManager GetInstance() => instance;
+    public static PlayerManager GetInstance()
+    {
+
+        if (instance == null)
+        {
+            instance = FindObjectOfType<PlayerManager>(); // Or find an existing manager in the scene
+        }
+        return instance;
+
+    }
+
+    public event Action PlayerIsDead;
+
 
     [SerializeField]
 
@@ -26,7 +39,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private int health;
     #endregion
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         instance = this;
 
@@ -37,7 +50,7 @@ public class PlayerManager : MonoBehaviour
     public void AddXp(int ammount)
     {
         currentXp += ammount;
-        if(currentXp >= nextLv) { currentLv++; currentXp -= nextLv; nextLv *= 2;  }
+        if (currentXp >= nextLv) { currentLv++; currentXp -= nextLv; nextLv *= 2; }
 
         UiManager.GetInstance().UpdateXpSlider(currentXp / nextLv);
 
@@ -46,7 +59,7 @@ public class PlayerManager : MonoBehaviour
     public void PlayerTakeDamage(int dmg)
     {
         health -= dmg + 20;
-        if(health <= 0)
+        if (health <= 0)
         {
             Die();
         }
@@ -55,5 +68,6 @@ public class PlayerManager : MonoBehaviour
     private void Die()
     {
         UiManager.GetInstance().playerDeath();
+        PlayerIsDead?.Invoke();
     }
 }

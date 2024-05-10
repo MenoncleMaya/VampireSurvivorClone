@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.VisualScripting;
+using static UnityEngine.Rendering.DebugUI;
 
 public class MainMenuUi : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class MainMenuUi : MonoBehaviour
     //[SerializeField] SimpleSlider volumeSliderScript;
     #endregion
 
+    [SerializeField] AudioSource AudioSource;
+
     private void Awake()
     {
         bPlay.OnClick += GoToGameScene;
@@ -41,34 +44,40 @@ public class MainMenuUi : MonoBehaviour
         volumeSlider.minValue = 0;
         volumeSlider.value = settings.Volume;
         volume.text = settings.Volume.ToString();
+        AudioSource.volume = settings.Volume / 100;
     }
 
 
     private void GoToGameScene()
     {
+        AudioSource.Play();
         SceneManager.LoadScene(1);
     }
 
     private void OpenSettings()
     {
+        AudioSource.Play();
         Main.SetActive(false);
         Settings.SetActive(true);
     }
 
     private void Quit()
     {
+        AudioSource.Play();
         Application.Quit();
     }
 
     private void BackToMain()
     {
+        AudioSource.Play();
         Settings.SetActive(false);
         Main.SetActive(true);
     }
 
     private void HandleVolumeChange(float value)
     {
-        settings.Volume = value.ConvertTo<int>();
+        AudioSource.volume = value/100;
+        settings.Volume = value;
         volume.text = value.ToString();
     }
 }
