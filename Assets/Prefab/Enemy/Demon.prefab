@@ -95,9 +95,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1685064436471681946}
   - component: {fileID: 7957559410832858737}
+  - component: {fileID: 8972868611420401909}
+  - component: {fileID: 7951333306405097816}
   m_Layer: 0
   m_Name: Demon
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,6 +135,49 @@ MonoBehaviour:
   shootCooldown: 2
   currentTime: 0
   projectile: {fileID: 4822845505801432747, guid: 144bd64f01709f64c91c5342f67bed73, type: 3}
+  inRange: 0
+--- !u!114 &8972868611420401909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5899444619127298256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e69b1b939c1cd540b1af628d57c1db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  shootingRange: 5
+  SAP: {fileID: 7957559410832858737}
+--- !u!50 &7951333306405097816
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5899444619127298256}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &7713186939120157269
 GameObject:
   m_ObjectHideFlags: 0

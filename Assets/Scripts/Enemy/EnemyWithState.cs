@@ -29,10 +29,10 @@ public class EnemyWithState : MonoBehaviour
         if (distanceToTarget > shootingRange)
         {
             Vector2 direction = (mouvementSCript.GetInstance().gameObject.transform.position - transform.position).normalized;
-            rb.velocity = direction * speed * Time.deltaTime;
+            rb.velocity = direction * speed /** Time.deltaTime*/;
             SAP.inRange = false;
         }
-        else
+        if (distanceToTarget <= shootingRange + 1)
         {
             // Stop moving when within range
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
