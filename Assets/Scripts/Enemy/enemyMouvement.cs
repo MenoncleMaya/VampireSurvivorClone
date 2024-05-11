@@ -11,12 +11,13 @@ public class enemyMouvement : MonoBehaviour
     private SpriteRenderer sprite;
     Vector3 direction;
     GameObject playerRef;
+    int dammage = 3;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-        playerRef = mouvementSCript.instance.gameObject;
+        playerRef = mouvementSCript.GetInstance().gameObject;
     }
 
     private void Update()
@@ -35,5 +36,27 @@ public class enemyMouvement : MonoBehaviour
     {
         direction = playerRef.transform.position - rb.transform.position;
         rb.velocity = direction.normalized * mouvementSpeed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            StartCoroutine(attackPlayer());
+            Debug.Log("playerHit");
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            StopCoroutine(attackPlayer());
+        }
+    }
+
+    IEnumerator attackPlayer()
+    {
+        PlayerManager.GetInstance().PlayerTakeDamage(dammage);
+        yield return new WaitForSeconds(1f);
     }
 }

@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class mouvementSCript : MonoBehaviour
 {
-    public static mouvementSCript instance;
+    private static mouvementSCript instance;
+    public static mouvementSCript GetInstance()
+    {
+        if (instance == null)
+        {
+            instance = FindObjectOfType<mouvementSCript>(); // Or find an existing manager in the scene
+        }
+        return instance;
+    }
 
 
     [Header("Mouvement Var")]
@@ -26,8 +34,11 @@ public class mouvementSCript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        x = Input.GetAxisRaw("Horizontal");
-        y = Input.GetAxisRaw("Vertical");
+        if (!GameManager.GetInstance().GetIsPaused())
+        {
+            x = Input.GetAxisRaw("Horizontal");
+            y = Input.GetAxisRaw("Vertical");
+        }
 
         if(x < 0)
         {
@@ -38,6 +49,11 @@ public class mouvementSCript : MonoBehaviour
             flipX = false;
         }
         sprite.flipX = flipX;
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            UiManager.GetInstance().TogglePauseMenu();
+        }
     }
 
     private void FixedUpdate()

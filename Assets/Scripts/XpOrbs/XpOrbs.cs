@@ -56,10 +56,10 @@ public class XpOrbs : MonoBehaviour
 
 
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        playerRef = mouvementSCript.instance.gameObject;
+        playerRef = mouvementSCript.GetInstance().gameObject;
     }
 
     void FixedUpdate()

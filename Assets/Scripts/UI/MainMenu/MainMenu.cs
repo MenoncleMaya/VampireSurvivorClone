@@ -38,8 +38,8 @@ public class MainMenuUi : MonoBehaviour
         bSettings.OnClick += OpenSettings;
         bQuit.OnClick += Quit;
         bSettingsBack.OnClick += BackToMain;
-        volumeSlider.onValueChanged.AddListener(HandleVolumeChange);
 
+        volumeSlider.onValueChanged.AddListener(HandleVolumeChange);
         volumeSlider.maxValue = 100;
         volumeSlider.minValue = 0;
         volumeSlider.value = settings.Volume;
@@ -51,6 +51,7 @@ public class MainMenuUi : MonoBehaviour
     private void GoToGameScene()
     {
         AudioSource.Play();
+        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 

@@ -13,7 +13,6 @@ public class playerAttack : MonoBehaviour
     [SerializeField] private bool canAtk;
     [SerializeField] private const float ATK_TIMER = 1f;
     [SerializeField] private int direction;
-    [SerializeField] private int atkLv;
     private SpriteRenderer sr;
     private float rotTop = 30f;
     private float rotBot = 330f;
@@ -56,7 +55,7 @@ public class playerAttack : MonoBehaviour
 
     void AtkWithLv()
     {
-        switch (atkLv)
+        switch (PlayerManager.GetInstance().scytheLv)
         {
             case 1:
                 CreateAtk(direction, new Vector3(transform.position.x + 0.5f * direction, transform.position.y + 0.6f, transform.position.z), sr, Lv1AtkDammage, 0f);
@@ -76,17 +75,6 @@ public class playerAttack : MonoBehaviour
         }
     }
 
-    //void CreateAtk(int direction, Vector3 weaponPOS, SpriteRenderer sr, int atkDammage)
-    //{
-    //    GameObject temp = ObjectPooler.GetInstance().SpawnFromPool("Scythe", weaponPOS);
-    //    temp.GetComponentInChildren<SpriteRenderer>().flipX = sr.flipX;
-    //    temp.GetComponent<Scythe>().direction = direction;
-    //    temp.GetComponent<Scythe>().dammage = atkDammage;
-
-
-
-    //    StartCoroutine(SetInactiveAfterTime(0.75f, temp));
-    //}
 
     void CreateAtk(int direction, Vector3 weaponPOS, SpriteRenderer sr, int atkDammage, float rotation)
     {

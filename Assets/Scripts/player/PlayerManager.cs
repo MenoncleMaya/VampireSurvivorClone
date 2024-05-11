@@ -18,6 +18,7 @@ public class PlayerManager : MonoBehaviour
     }
 
     public event Action PlayerIsDead;
+    public event Action LevelUp;
 
 
     [SerializeField]
@@ -32,6 +33,8 @@ public class PlayerManager : MonoBehaviour
     public float nextLv;
     public int currentLv;
     public const int LV_MAX = 10;
+    public int scytheLv;
+    public int axeLv;
 
     #region Health
     private const int StartMaxHealth = 20;
@@ -50,7 +53,7 @@ public class PlayerManager : MonoBehaviour
     public void AddXp(int ammount)
     {
         currentXp += ammount;
-        if (currentXp >= nextLv) { currentLv++; currentXp -= nextLv; nextLv *= 2; }
+        if (currentXp >= nextLv) { PlayerLevelUp(); currentXp -= nextLv; nextLv *= 2; }
 
         UiManager.GetInstance().UpdateXpSlider(currentXp / nextLv);
 
@@ -67,7 +70,11 @@ public class PlayerManager : MonoBehaviour
 
     private void Die()
     {
-        UiManager.GetInstance().playerDeath();
         PlayerIsDead?.Invoke();
+    }
+    private void PlayerLevelUp()
+    {
+        currentLv++;
+        LevelUp?.Invoke();
     }
 }

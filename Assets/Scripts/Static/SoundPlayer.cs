@@ -9,8 +9,16 @@ public class SoundPlayer : MonoBehaviour
     private static SoundPlayer instance;
 
     [SerializeField] AudioSource deathAudioSource;
+    [SerializeField] AudioSource buttonAudioSource;
 
-    public static SoundPlayer GetInstance() => instance;
+    public static SoundPlayer GetInstance()
+    {
+        if (instance == null)
+        {
+            instance = FindObjectOfType<SoundPlayer>(); // Or find an existing manager in the scene
+        }
+        return instance;
+    }
 
     void Awake()
     {
@@ -20,5 +28,23 @@ public class SoundPlayer : MonoBehaviour
     public void PlayDeathSound()
     {
         deathAudioSource.Play();
+    }
+    public void PlayButtonSound()
+    {
+        buttonAudioSource.Play();   
+    }
+    public void SetVolume(float volume)
+    {
+        deathAudioSource.volume = volume;
+    }
+    public void PauseAudio()
+    {
+        buttonAudioSource.Pause();
+        deathAudioSource.Pause();
+    }
+    public void UnPauseAudio()
+    {
+        //buttonAudioSource.UnPause();
+        deathAudioSource.UnPause();
     }
 }

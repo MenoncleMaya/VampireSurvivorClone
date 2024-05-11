@@ -12,7 +12,7 @@ public class ShootAtPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerRef = mouvementSCript.instance;
+        PlayerRef = mouvementSCript.GetInstance();
         currentTime = 0f;
     }
 
@@ -24,7 +24,7 @@ public class ShootAtPlayer : MonoBehaviour
         if (currentTime >= shootCooldown)
         {
             currentTime = 0f;
-            Vector3 playerPos = mouvementSCript.instance.transform.position - transform.position;
+            Vector3 playerPos = mouvementSCript.GetInstance().transform.position - transform.position;
             CreateAtk(playerPos, this.gameObject.transform.position, 1);
         }
     }
@@ -33,7 +33,7 @@ public class ShootAtPlayer : MonoBehaviour
     {
         GameObject temp = ObjectPooler.GetInstance().SpawnFromPool("DemonAtk", weaponPOS);
 
-        Vector3 targetDirection = mouvementSCript.instance.transform.position - transform.position;
+        Vector3 targetDirection = mouvementSCript.GetInstance().transform.position - transform.position;
         targetDirection.y += 0.6f;
 
         // Normalize the target direction

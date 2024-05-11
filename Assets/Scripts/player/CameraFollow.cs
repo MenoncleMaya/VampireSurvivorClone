@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Vector3 desiredPosition = mouvementSCript.instance.gameObject.transform.position + offset;
+        Vector3 desiredPosition = mouvementSCript.GetInstance().gameObject.transform.position + offset;
         Vector3 position = Vector3.Lerp(rb.position, desiredPosition, smoothSpeed * Time.fixedDeltaTime);
         rb.MovePosition(position);
     }
