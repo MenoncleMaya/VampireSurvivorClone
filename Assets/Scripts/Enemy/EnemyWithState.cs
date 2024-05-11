@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyWithState : MonoBehaviour
 {
     public float speed = 5.0f;
-    public float shootingRange = 3.0f;
+    public float shootingRange = 4.0f;
+    public float mouvementRange = 3.0f;
     Rigidbody2D rb;
 
     [SerializeField] ShootAtPlayer SAP;
@@ -32,7 +33,7 @@ public class EnemyWithState : MonoBehaviour
             rb.velocity = direction * speed /** Time.deltaTime*/;
             SAP.inRange = false;
         }
-        if (distanceToTarget <= shootingRange + 1)
+        if (distanceToTarget <= shootingRange)
         {
             // Stop moving when within range
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;

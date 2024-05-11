@@ -148,8 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e69b1b939c1cd540b1af628d57c1db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   shootingRange: 5
+  mouvementRange: 3
   SAP: {fileID: 7957559410832858737}
 --- !u!50 &7951333306405097816
 Rigidbody2D:
