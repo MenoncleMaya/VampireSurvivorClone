@@ -10,6 +10,7 @@ public class SoundPlayer : MonoBehaviour
 
     [SerializeField] AudioSource deathAudioSource;
     [SerializeField] AudioSource buttonAudioSource;
+    [SerializeField] AudioSource Music;
 
     public static SoundPlayer GetInstance()
     {
@@ -36,10 +37,12 @@ public class SoundPlayer : MonoBehaviour
     public void SetVolume(float volume)
     {
         deathAudioSource.volume = volume;
+        buttonAudioSource.volume = volume;
+        Music.volume = volume;
     }
     public void PauseAudio()
     {
-        buttonAudioSource.Pause();
+        //buttonAudioSource.Pause();
         deathAudioSource.Pause();
     }
     public void UnPauseAudio()

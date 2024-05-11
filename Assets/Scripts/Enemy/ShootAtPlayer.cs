@@ -6,13 +6,12 @@ using static UnityEngine.GraphicsBuffer;
 public class ShootAtPlayer : MonoBehaviour
 {
 
-    mouvementSCript PlayerRef;
     [SerializeField] float shootCooldown, currentTime;
     [SerializeField] GameObject projectile;
+    public bool inRange = false;
     // Start is called before the first frame update
     void Start()
     {
-        PlayerRef = mouvementSCript.GetInstance();
         currentTime = 0f;
     }
 
@@ -21,7 +20,7 @@ public class ShootAtPlayer : MonoBehaviour
     {
         currentTime += Time.deltaTime;
 
-        if (currentTime >= shootCooldown)
+        if (currentTime >= shootCooldown && inRange)
         {
             currentTime = 0f;
             Vector3 playerPos = mouvementSCript.GetInstance().transform.position - transform.position;
